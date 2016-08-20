@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
-from notes.views import home_view, upload_data
+from notes.views import home_view, upload_data, UploadPaySlips
 
 urlpatterns = patterns('',
     # Examples:
@@ -12,5 +12,6 @@ urlpatterns = patterns('',
 
     url(r'^$', home_view, name='home'),
     url(r'^upload', upload_data, name='upload'),
+    url(r'^payslips-upload$', UploadPaySlips.as_view(), name="payslips-upload"),
     url(r'^notes/', include('notes.urls', namespace='notes')),
 )
