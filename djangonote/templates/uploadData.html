@@ -1,6 +1,38 @@
 {% extends "baseTemplate.html" %}
+{% load staticfiles %}
 {% block content%}
     <div class="row">
-        <h4>Upload Excel Data</h4>
+        <h2 style="text-align: center">Upload Excel Data</h2>
+    </div>
+    <div class="row">
+        <div class="large-6 large-centered">
+            <fieldset>
+                <legend>
+                    Upload Data
+                </legend>
+                <form id="excelData" name="excelData">
+                    <div class="fields">
+                        <label>Enter Title</label>
+                        <input type="text" name="paySlipTitle" id="paySlipTitle" placeholder="Enter Title">
+                    </div>
+                    <div class="fields">
+                        <label>Enter Month</label>
+                        <input type="text" name="paySlipMonth" id="paySlipMonth" placeholder="Enter Month">
+                    </div>
+                    <div class="fields">
+                        <label>Enter Year</label>
+                        <input type="text" name="paySlipMonthYear" id="paySlipMonthYear" placeholder="Enter Year">
+                    </div>
+                    <div class="fields">
+                        <input type="file" name="paySlipExcelData" id="paySlipExcelData" placeholder="Please select Excel File">
+                    </div>
+                    <a id="submitExeclData" name="submitExeclData" class="button radius">Submit</a>
+                </form>
+            </fieldset>
+        </div>
     </div>
 {% endblock %}
+
+{% block javascript %}
+    <script src="{% static "js/paySlip/uploadExcelData.js" %}"></script>
+{% endblock javascript %}

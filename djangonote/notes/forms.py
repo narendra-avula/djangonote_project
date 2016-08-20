@@ -11,3 +11,11 @@ class TagForm(models.Model):
     class Meta:
         model = Tag
         fields = ('label',)
+
+
+class UploadExcelData(models.Model):
+    title = models.CharField(max_length=200)
+    month = models.CharField(max_length=200)
+    year = models.CharField(max_length=200)
+    filedata = models.FileField()
+

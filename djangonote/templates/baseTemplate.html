@@ -12,11 +12,20 @@
 </head>
 <body>
     <div class="row">
-        <img style="margin-top: 10px" src="http://d3cc34wxvev8pg.cloudfront.net/static/images/miscellaneous/custom-furnish.png"
+        <img style="margin-top: 10px" src="{% static "images/custom-furnish.png" %}"
              alt="KustomMade">
         <hr>
     </div>
     {% block content %}
+
     {% endblock %}
+
+    <script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/jquery.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/foundation.min.js" %}"></script>
+    {% block javascript %}
+
+    {% endblock javascript %}
+
 </body>
 </html>
