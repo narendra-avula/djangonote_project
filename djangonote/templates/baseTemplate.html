@@ -1,0 +1,22 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Notes</title>
+    <link rel="stylesheet" href="{% static "css/foundation.css" %} ">
+    <link rel="stylesheet" href="{% static "css/foundation.min.css" %} ">
+    <link rel="stylesheet" href="{% static "css/normalize.css" %} ">
+    <script src="{% static "jquery.js" %}"></script>
+</head>
+<body>
+    <div class="row">
+        <img style="margin-top: 10px" src="http://d3cc34wxvev8pg.cloudfront.net/static/images/miscellaneous/custom-furnish.png"
+             alt="KustomMade">
+        <hr>
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
